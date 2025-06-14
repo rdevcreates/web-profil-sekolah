@@ -1,10 +1,9 @@
-"use client";
+'use client';
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DropdownMenu from "./DropdownMenu";
 
-// Tipe data menu
 type MenuItem =
   | { label: string; href: string; type: "link" }
   | {
@@ -17,10 +16,8 @@ export default function Header() {
   const pathname = usePathname();
 
   const isActive = (href: string) => pathname === href;
-
-  const isDropdownActive = (items: { label: string; href: string }[]) => {
-    return items.some((item) => pathname === item.href);
-  };
+  const isDropdownActive = (items: { label: string; href: string }[]) =>
+    items.some((item) => pathname === item.href);
 
   const menuItems: MenuItem[] = [
     { label: "Dashboard", href: "/", type: "link" },
@@ -39,7 +36,7 @@ export default function Header() {
         { label: "Struktur Organisasi", href: "/pages/profile/organizational" },
         { label: "Data Guru", href: "/pages/profile/teacher" },
         { label: "Data Staf", href: "/pages/profile/staff" },
-        { label: "Fasilitas", href: "/pages/facility"},
+        { label: "Fasilitas", href: "/pages/facility" },
         { label: "Ekstrakurikuler", href: "/pages/profile/extracurricular" },
       ],
     },
@@ -49,28 +46,26 @@ export default function Header() {
   ];
 
   return (
-    <header className="py-4 bg-white shadow-sm sticky top-0 z-50">
-      <nav className="w-full flex items-center justify-between px-6 text-dark max-w-7xl mx-auto">
+    <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
+      <div className="flex justify-between items-center px-6 py-3">
         {/* Logo */}
-        <div>
-          <h1 className="text-xl font-bold text-blue-700 tracking-wide">
-            SEKOLAHKU
-          </h1>
-        </div>
+        <div className="text-xl font-extrabold text-gray-800">SEKOLAHKU</div>
 
-        {/* Menu */}
-        <div className="hidden md:flex gap-x-6 items-center">
+        {/* Menu Nav */}
+        <nav className="hidden md:flex items-center gap-2 bg-gray-100 px-2 py-1 rounded-full">
           {menuItems.map((item, index) => {
             if (item.type === "link") {
+              const active = isActive(item.href);
               return (
                 <Link
                   key={index}
                   href={item.href}
-                  className={
-                    isActive(item.href)
-                      ? "font-bold text-blue-500"
-                      : "text-gray-700 hover:text-blue-500 transition"
-                  }>
+                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                    active
+                      ? "bg-white text-black shadow-sm"
+                      : "text-gray-600 hover:bg-white hover:text-black"
+                  }`}
+                >
                   {item.label}
                 </Link>
               );
@@ -89,15 +84,17 @@ export default function Header() {
 
             return null;
           })}
-        </div>
+        </nav>
 
         {/* Login button */}
-        <div className="hidden md:block">
-          <button className="border rounded-full px-4 py-1.5 bg-blue-600 text-white hover:bg-blue-700 transition">
-            Login
-          </button>
+        <div className="hidden md:flex items-center gap-2">
+          <Link href="/pages/auth/login">
+            <button className="bg-gray-100 hover:bg-gray-200 text-sm px-4 py-1.5 rounded-full transition font-medium">
+              Login
+            </button>
+          </Link>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
