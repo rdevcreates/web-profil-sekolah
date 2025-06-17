@@ -19,7 +19,7 @@ export default function AdminHeader() {
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
       <div className="flex justify-between items-center px-6 py-3">
         {/* Logo */}
-        <span className="text-2xl font-extrabold text-gray-800">YosGrup</span>
+        <span className="text-2xl font-extrabold text-gray-800">RdevCreates</span>
 
         {/* Nav + Action */}
         <div className="flex items-center gap-4">

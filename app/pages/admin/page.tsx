@@ -12,7 +12,7 @@ export default function AdminDashboard() {
       {/* Progress Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { label: 'Interviews', value: '25%', color: 'bg-gray-700' },
+          { label: 'Interviews', value: '25%', color: 'bg-gray-300' },
           { label: 'Hired', value: '51%', color: 'bg-yellow-400' },
           { label: 'Project Time', value: '10%', color: 'bg-gray-300/70 border border-dashed' },
           { label: 'Output', value: '14%', color: 'bg-white border' },
