@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function LoginPage() {
+export default function Login() {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <motion.div

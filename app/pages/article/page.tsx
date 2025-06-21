@@ -27,9 +27,9 @@ export default function ArticlePage() {
   ]
 
   return (
-    <section className="min-h-screen bg-blue-50 py-20 px-4">
+    <div className="min-h-screen bg-blue-50 py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-blue-800 text-center mb-12">
+        <h1 className="text-4xl font-extrabold text-blue-400 text-center mb-12">
           📰 Artikel Populer
         </h1>
 
@@ -57,6 +57,6 @@ export default function ArticlePage() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }

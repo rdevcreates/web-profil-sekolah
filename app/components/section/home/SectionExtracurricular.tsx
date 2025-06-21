@@ -15,7 +15,7 @@ export default function SectionExtracurricular() {
     { icon: "🧘", label: "Kesehatan Mental" },
   ];
 
-  const itemsPerRow = 4; // disesuaikan dengan breakpoints md:grid-cols-4
+  const itemsPerRow = 4;
   const isIncompleteRow = categories.length % itemsPerRow !== 0;
   const showMoreButton = isIncompleteRow;
 
@@ -40,7 +40,6 @@ export default function SectionExtracurricular() {
             </div>
           ))}
 
-          {/* Tombol Selengkapnya di slot kosong */}
           {showMoreButton && (
             <div className="flex items-center justify-center">
               <button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">

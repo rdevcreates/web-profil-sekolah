@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
       <SectionWelcome />
-      <WaveDivider color="blue-50" flip />
+      <WaveDivider color="blue-200" flip />
 
       <SectionFacility />
-      <WaveDivider color="blue-50" flip />
+      <WaveDivider color="blue-200" flip />
 
       <SectionExtracurricular />
-      <WaveDivider color="blue-50" flip />
+      <WaveDivider color="blue-200" flip />
 
       <SectionArticle />
     </main>

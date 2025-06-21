@@ -1,4 +1,3 @@
-// components/ui/WaveDivider.tsx
 export default function WaveDivider({
   color = "white",
   flip = false,

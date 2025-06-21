@@ -3,13 +3,11 @@
 export default function AdminDashboard() {
   return (
     <div className="space-y-10">
-      {/* Header */}
       <div className="flex flex-col gap-1">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Welcome back 👋</h1>
         <p className="text-gray-500">Here's what's happening with your team today.</p>
       </div>
 
-      {/* Progress Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
           { label: 'Interviews', value: '25%', color: 'bg-gray-300' },
@@ -27,7 +25,6 @@ export default function AdminDashboard() {
         ))}
       </div>
 
-      {/* Ringkasan Data */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           { label: 'Jumlah Siswa', value: 320, bg: 'bg-blue-100', text: 'text-blue-700' },
@@ -44,7 +41,6 @@ export default function AdminDashboard() {
         ))}
       </div>
 
-      {/* Aktivitas Terakhir */}
       <div className="bg-white p-6 rounded-xl shadow-md border">
         <h2 className="text-lg font-semibold mb-4 text-gray-800">Aktivitas Terakhir</h2>
         <ul className="divide-y divide-gray-200 text-gray-700 text-sm">

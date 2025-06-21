@@ -21,7 +21,6 @@ export default function MobileSidebar({ open, onClose }: MobileSidebarProps) {
     <AnimatePresence>
       {open && (
         <>
-          {/* Overlay */}
           <motion.div
             className="fixed inset-0 z-[60] bg-black/30 backdrop-blur-sm"
             onClick={onClose}
@@ -30,7 +29,6 @@ export default function MobileSidebar({ open, onClose }: MobileSidebarProps) {
             exit={{ opacity: 0 }}
           />
 
-          {/* Sidebar */}
           <motion.aside
             initial={{ x: "100%" }}
             animate={{ x: 0 }}

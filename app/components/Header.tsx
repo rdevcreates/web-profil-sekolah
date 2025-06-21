@@ -40,7 +40,7 @@ export default function Header() {
         { label: "Struktur Organisasi", href: "/pages/profile/organizational" },
         { label: "Data Guru", href: "/pages/profile/teacher" },
         { label: "Data Staf", href: "/pages/profile/staff" },
-        { label: "Fasilitas", href: "/pages/facility" },
+        { label: "Fasilitas", href: "/pages/profile/facility" },
         { label: "Ekstrakurikuler", href: "/pages/profile/extracurricular" },
       ],
     },
